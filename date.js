@@ -1,6 +1,8 @@
    //              #DATE
-let date = new Date()
-console.log(date.toLocaleTimeString())
+const d = new Date("January 01, 2025");
+d.setFullYear(2022);
+d.setMonth(11)
+console.log(d)
 /*const date = new Date (2000,12,30,12,12,12)//use 6 numbers for (year, month, day, hour, minute, second) and 5 for up to minute and soon
 // months are counted from 0 to 11 
 // here i have used 12 it converted to next year 2001-01-30 

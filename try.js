@@ -105,7 +105,12 @@ let txt = "I can eat bananas all day all along";
 // console.log(txt.match("day"))   matches the value in string 
 
 
-let x = 100.0000010000;
+let x = 100.60;
+console.log(Math.floor(x))   //returns the value of x rounded down to its nearest integer: 100
+console.log(Math.ceil(x))  // returns the value of x rounded up to its nearest integer:101
+console.log(Math.trunc(x)) // removes part of decimal and give int only 100
+console.log(Math.sign(x)) //it return 1 for +ve, -1 for -ve, and 0 for 0      ans-> 1
+console.log(Math.pow(8, 2))   //pow uses y as power of x here 8^2 = 64
 //console.log(x.toPrecision(9))
 //console.log(x.toFixed(3));
 // console.log(x.toString())
