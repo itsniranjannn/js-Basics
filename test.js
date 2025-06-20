@@ -1,3 +1,17 @@
+/*var message = "hello";   // var can be redeclared ad reassigned
+var message = "heeeeeeeeeheeeeee"
+console.log(message)
+
+
+let topic= "love"     // cannot be redeclare but can be reassigned
+//let topic = "loveee"
+topic = "looooo veeeee"  //reassigned like this
+console.log(topic)
+
+const mess = "messssssssssy"  // neithher be redeclared nor reassigned
+const mess = "ghfhgjfcgj" //no redeclaration
+mess = "jkhjghjgf"  //no re assignment*/
+
 // let niru= 1
 // let shiiru= 2
 

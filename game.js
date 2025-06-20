@@ -39,3 +39,12 @@ for(let i=0; i<price.length; i++){
     
 }console.log(price) */
 
+function vowelcount(string){
+      let count = 0
+    for (let val of string){
+        if(val === "a"){
+          count++
+        }
+        
+}console.log(count)
+}
