@@ -95,7 +95,7 @@ let value = marks.findLastIndex(mark)  //   find first value that pass the condi
 /*const sub= ["math", "english", "gk", "science"]
  console.log("array =", ...marks, ...sub)    //spreading array
 
-console.log(sub.sort()) // arragne in alphebetical order  
+console.log(sub.sort()) // arrange in alphabetical order  
  const newarray = sub.toSorted(); //can use ToSorted to sort alphabetically & assign new array 
  console.log(newarray)
 console.log(sub.reverse()) //  reverse the array and these change main array 

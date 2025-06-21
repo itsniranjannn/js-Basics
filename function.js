@@ -45,7 +45,7 @@ let x = ()=> {
 
              }
              console.log(addtwonum(2 , 3))
-//implicit return
+/implicit return
     const sub = (num1, num2) => (num1 - num2) // no need to use return use small bracket instead 
     console.log(sub(3, 2))*/
 
@@ -87,7 +87,32 @@ const mess = (( mes) =>{
     console.log(`Sir Niranjan said "${con}"`)
 })("I am a small being in this supernova universe");*/
 
+
+/**(function curly(value){
+    console.log("this is not that" + value)
+})(100);
+
+function check(val){
+    console.log(`this is ${val}`)
+}
+check(100);
+
+((val)=>{
+    console.log(`thus no ${val}`)
+    })(100) */
+
 //Qno 1
+
+/*function vowelcount(string){
+      let count = 0
+    for (let val of string){
+        if(val === "a"){
+          count++
+        }
+        
+}console.log(count)
+}
+//using arrow
 let alphabet = (string)=>{
 let count = 0;
 for(let value of string){
@@ -97,4 +122,58 @@ for(let value of string){
 }
 console.log(count)
 }
-alphabet("apple");
+alphabet("apple");*/
+
+//Call back function
+//--using for each, this is used to extract each element of an array one by one
+/*const array = [111, 233, 545, 435, 674, 909]; //normal
+array.forEach( function onebyonearray(value){
+    console.log(value)
+});
+array.forEach((value, index, array)=>{ // arrow
+    console.log(value, index, array)
+})
+const array = [ 1, 2 ,3 , 4 , 5]
+array.forEach((value, index, array)=>{ // arrow
+    console.log(value, index, array)
+})*/ 
+//----ForEach is higher order function-----
+//fuction which passes other function as a parameter or returns the fuction as output are HIGHER ORDER FUNCTION
+
+//Qno 2
+/*const array = [1, 2, 3, 4, 5];
+// array.forEach((value)=>{
+//     console.log(value * value)
+//     })
+
+let newarr = array.map((value)=>{   // map function is used to return output in new array without changing original one
+console.log(value / 2)
+})
+
+let newwww = array.map(function myf(val){
+    console.log(val + val * 2);
+})*/
+const array = [100, 233, 456,789, 9999, 463, 766];
+
+/*array.filter(function evenfunc(value){    // filter method is used to fiter the data of array based on the condition if true or false
+    if(value % 2 == 1){
+        console.log("this is odd" + value)
+    }
+})*/
+ 
+// const finalresult = array.reduce((post, pre)=>{
+//  return post > pre ? post : pre;
+// })
+// console.log(finalresult);
+
+
+const marks = [98, 78, 99, 79, 87];
+const ninety = marks.filter((value)=>{
+  if(value>90){
+    console.log("this score is " + value)
+  }
+})
+let ninet = marks.map((value)=>{
+ return value > 90
+})
+console.log(ninet)

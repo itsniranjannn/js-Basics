@@ -39,12 +39,23 @@ for(let i=0; i<price.length; i++){
     
 }console.log(price) */
 
-function vowelcount(string){
-      let count = 0
-    for (let val of string){
-        if(val === "a"){
-          count++
-        }
-        
-}console.log(count)
+
+
+let num = prompt("enter the number");
+let arr =[]
+ for(i=1; i<=num; i++){
+  arr[i-1]= i;
 }
+console.log(arr)
+const result = arr.reduce((pos, pre)=>{
+  return pos + pre;
+})
+console.log(result)
+
+const multi = arr.reduce(function multiply(pre, cur){
+  return pre * cur;
+})
+
+console.log(multi)
+
+console.log(24*5)

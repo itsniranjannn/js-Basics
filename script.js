@@ -1,3 +1,10 @@
+//---------falsy values------------
+//false, 0, -0,0n, null, NaN, undefined,""
+//--------Truthy Values------------
+//All other than falsy are truthy but som suprising ones are ----
+//"0", "false", " " something inside String     , {}, [], function(){}
+
+
 // let i = 0;
 // while(i<=100){
 //   if (i%2!==0){
@@ -32,11 +39,11 @@
 
 // console.log("Here are exampl \t es of finding the \v positions\nof substrings in the sentence.");
 
-// // console.log(learningIsFunSentence.indexOf("."));
+// console.log(learningIsFunSentence.indexOf("."));
 
-// // console.log(Sentence.includes("is"))
+ // console.log(Sentence.includes("is"))
 // let newsentence = Sentence.replace("is", 1)
-// // console.log(Sentence.slice(7 , 9))
+ // console.log(Sentence.slice(7 , 9))
 // console.log(newsentence)
 // console.log(100e3)
 // const fortune1 = "Your cat will look very cuddly today.";
@@ -45,7 +52,7 @@
 // const fortune4 = "You will find a new hobby soon.";
 // const fortune5 = "It would be wise to avoid the color red today.";
 
-// // Select a random number between 1 and 5
+// Select a random number between 1 and 5
 // const randomNumber = Math.floor(Math.random() * 5) + 1;
 
 // Assign the selected fortune to the selectedFortune variable
@@ -105,3 +112,30 @@
 //   greeting = "Good evening";
 // }
 // alert(greeting);
+// const nam= 2
+// switch(nam){
+//     case 1:
+//         console.log("its N");
+//         break;
+//     case 2:
+//         console.log("its not N")
+// break;
+// default:
+// }
+
+
+//null coalescing
+let value;
+value = null ?? 2
+console.log(value)
+value = undefined ?? 2
+console.log(value)
+
+
+//ternary operator
+const val = 200
+val <= 201 ? console.log("this is less") : console.log("this is more")
+
+
+let values = 19
+values <= 20 ? console.log("this is less") : console.log("this is more")
