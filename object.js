@@ -25,3 +25,4 @@ console.log(typeof obj["age"])
 Object.freeze(obj)//this is used when we dont want any changes on the object
 obj.name= "niranjan"
 console.log(obj["name"])
+
