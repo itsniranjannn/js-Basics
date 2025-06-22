@@ -69,7 +69,7 @@
 //   selectedFortune = fortune5;
 // }
 
-// // Log the selected fortune to the console
+//Log the selected fortune to the console
 // console.log(selectedFortune);
 // let a = prompt("enter your number:");
 // if(a % 5==0){
@@ -125,17 +125,20 @@
 
 
 //null coalescing
-let value;
-value = null ?? 2
-console.log(value)
-value = undefined ?? 2
-console.log(value)
+// let value;
+// value = null ?? 2
+// console.log(value)
+// value = undefined ?? 2
+// console.log(value)
 
 
 //ternary operator
-const val = 200
-val <= 201 ? console.log("this is less") : console.log("this is more")
+// const val = 200
+// val <= 201 ? console.log("this is less") : console.log("this is more")
 
 
-let values = 19
-values <= 20 ? console.log("this is less") : console.log("this is more")
+// let values = 19
+// values <= 20 ? console.log("this is less") : console.log("this is more")
+
+
+

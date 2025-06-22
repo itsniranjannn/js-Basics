@@ -1,5 +1,20 @@
- //                  # ARRAYS
+ //--------------------# ARRAYS---------------------
+
+
+//-----to check the array is empty or not----
+// const arr = [ 1, 2 ];
+// if(arr.length === 0){
+//     console.log("empty array")
+// }
+// else{
+// console.log("array is filled ")
+// console.log(arr.length)
+// }
+
+
+
  const marks = [100, 93, 99, 91, 96, 98, 97, 94];
+ console.log(marks.includes(100))
  
 
 
