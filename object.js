@@ -126,7 +126,7 @@ const humans  = {
   class: "",
 set myclass(myclass){
   this.class = myclass;
-}
+},
 
 // set name(name){
 //   this.fullName = name;
@@ -147,7 +147,7 @@ const human = {
   
   // get add(){         //this is get
   //   return this.address;
-  // }
+  // },
   // set myname(myname){     //this is set
   //   this.fullName = myname
   // }
@@ -156,3 +156,12 @@ const human = {
 // human.myname = "Niranjan Katwal"           //for set
 // console.log(`hi its me ${human.fullName}`) */
 
+function myFunction(arg1, arg2) {
+  this.firstName = arg1;
+  this.lastName  = arg2;
+}
+const me= new myFunction("ni", "ka")
+myFunction.prototype.age = 22
+ console.log(`my age is ${me.age} `)
+
+ 

@@ -14,7 +14,8 @@
 
 
  const marks = [100, 93, 99, 91, 96, 98, 97, 94];
- console.log(marks.includes(100))
+//  console.log(marks.includes(100))
+
  
 
 
@@ -93,6 +94,8 @@ console.log(marks)
      return (a-b);
  }
 console.log(managedmarks)           //output [  91, 93, 94, 96, 97, 98, 99, 100 ]
+
+
 let value = managedmarks.find(mark)   //   find first value that pass the condition       91
 let value = marks.findLast(mark)    // find first value that pass the condition           94
 let value = marks.findIndex(mark)    // find first position index that pass the condition 0 position
@@ -144,14 +147,14 @@ marks.push(101) ; //to add in array
 
 
 [100, 93, 99, 91, 96, 98, 97]
-//to delete
+///to delete
  marks.splice(2,4)    output[100, 93, 97] //this deletes the 4 elements from the 2nd indexes 99 to 98 
-//to add 
+///to add 
  marks.splice(2,0, 100, 99, 12)   //output [100, 93, 100, 99, 12, 99, 91, 96, 98, 97] 
- //it add 100 99 12 just before 2nd index 
-//to replace
+ ///it add 100 99 12 just before 2nd index 
+///to replace
  marks.splice(2,3,111,200,300)  //       output   [100, 93, 111, 200, 300, 98, 97]
- //it replaced index 2 - 99, 3- 91 ,4- 96 and added respective values 111, 200, 300 */
+ ///it replaced index 2 - 99, 3- 91 ,4- 96 and added respective values 111, 200, 300 */
 
 // #### Sorting Object
 /* const cars = [
@@ -168,4 +171,13 @@ console.log(sortedobj)
 //marks[1] = 2
  //console.log(marks)
 
-    
+ 
+ //rest to check sum og array
+ function sum(...args) {
+  let sum = 0;
+  for (let arg of args) sum += arg;
+  return sum;
+}
+
+let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
+  console.log(x)
