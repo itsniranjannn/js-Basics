@@ -164,4 +164,3 @@ const me= new myFunction("ni", "ka")
 myFunction.prototype.age = 22
  console.log(`my age is ${me.age} `)
 
- 
