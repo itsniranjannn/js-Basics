@@ -3,51 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>practice</title>
-<style>
-  *{
-    text-align: center;
-  }
-  #outer{
-    height: 500px;
-    width:800px;
-  }
-  div{
-     height: 100px;
-     width: 100px;
-    border: 2px , solid, black;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-start;
+    <title>pa6</title>
+    <style>
+        #navbar{
+            background-color: black;
+            color: #faebd7;
+            display: flex;
+            flex-direction: row;
+           justify-content: space-evenly;
+        }
+        a{
+            text-decoration: none;
+            color: antiquewhite;
+        }
+        li{
+            list-style-type: none;
+            display: inline;      
+            
+        }
+        .outer{
+            height: 300px;
+            width: 400px;
+            background-color: blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .inner{
+            height: 200px;
+            width:200px;
+            background-color: aqua;
+            
 
-  }
-  #red{
-    background-color: #ff0000;
-  }
-  #green{
-    height:200px;
-     background-color: #00ff22;
-  }
-  #yellow{
-     background-color: #fffb00;
-  }
-  #purple{
-     background-color: #ea00ff;
-  }
-</style>
-
+        }
+        @media (min-width : 600px ) and (max-width :800px) {
+            .outer{
+background-color : red;
+}
+}
+    </style>
 </head>
 <body>
- <h1>flexbox</h1>
- <div id="outer">
-<div id="red">RED</div>
-<div id="green">GREEN</div>
-<div id="yellow">YELLOW</div>
-<div id="purple">PURPLE</div>
+    <ul  id="navbar" >
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Buy Now</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Profile</a></li>
+    </ul>
+    
+    <div class="outer">
+        <div class="inner">
 
- </div>
+        </div>
+    </div>
 </body>
 </html>
