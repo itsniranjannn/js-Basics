@@ -19,9 +19,30 @@
          display: block;  
          /* visibility: hidden; */
         }
+        .box{
+            height: 150px;
+            width: 200px;
+            border: 2px solid purple;
+            animation:ani 4s ease-in-out 1s infinite alternate-reverse forwards;
+        }  @keyframes ani{          
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+        }
     </style>
 </head>
 <body >
+<h2>Hello Javascript</h2>
+<div class="box">first div</div>
+<div class="box">first div</div>
+<div class="box">first div</div>
+
+
+
+
 
 <div class="firstdiv">
     <h1  style="position: relative;" id="topic" class="">trying DOM</h1>
@@ -32,6 +53,6 @@
     <label style="color: rgb(31, 255, 69)" for="name" class="label" >Name: </label><input type="text" name="name" id="name" placeholder="enter the name" required autofocus><hr>
 <label for="password" class="labelpass">Password: </label><input type="password" name="pass" id="pass" class="pass">
    </div>
-<script src=""></script>
+<script src="sc.js"></script>
 </body>
 </html>
