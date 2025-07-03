@@ -156,11 +156,36 @@ const human = {
 // human.myname = "Niranjan Katwal"           //for set
 // console.log(`hi its me ${human.fullName}`) */
 
-function myFunction(arg1, arg2) {
-  this.firstName = arg1;
-  this.lastName  = arg2;
-}
-const me= new myFunction("ni", "ka")
-myFunction.prototype.age = 22
- console.log(`my age is ${me.age} `)
+// function myFunction(arg1, arg2) {
+//   this.firstName = arg1;
+//   this.lastName  = arg2;
+// }
+// const me= new myFunction("ni", "ka")
+// myFunction.prototype.age = 22
+//  console.log(`my age is ${me.age} `)
 
+
+ const human = {
+  color : "white",
+  age : 21, 
+  address : "nepal",
+  fullName : "Niranjan",
+ }
+//ways to get object values
+//  const {color , fullName, age} = human
+//  console.log(`${fullName} is blank and age is ${age}`) 
+ console.log(`${human.color} and ${human.age}`)
+
+ for (y in human){
+
+  console.log(`${y} equals to ${human[y]}`)
+ }
+
+//  const mapp = new Map()
+//  mapp.set('1', 'one')
+//  console.log(mapp)
+//  mapp.get(1)
+
+//  for(let [x, y] of mapp){
+//   console.log(y)
+//  }
