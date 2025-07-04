@@ -5,38 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div{
+        body{
+            background-color: black;
+        }
+        #main{
             height: 100px;
             width: 100px;
             background-color: black;
-        }
+            border-radius: 50px;
+            animation: ani 1s ease-in-out -1s infinite alternate-reverse;          }
         @media (width:300px) {
-div {
+#main{
 background-color : rgb(0, 255, 34);
 }
 }
 @media (min-width:301px) and (max-width:400px) {
-    div{
+    #main{
         background-color: rgb(243, 140, 243);
     }
 }
 @media (min-width:401px) and (max-width:599px){
-    div{
+    #main{
         background-color: brown;
         display: flex;
         align-items: center;
     }
 }
 @media(min-width: 600px){
-    div{
+    #main{
         background-color: blue;
     }
 }
+ @keyframes ani{        
+  from 0%{background-color: rgb(255, 255, 255);
+    transform: translateX(100%);
+  }
+50%{   background-color: rgb(255, 0, 0);    
+transform: translateX(50%); }
+  to {
+    background-color: blueviolet;
+    transform: translateX(100%);   
+  }
+        }
     </style>
 </head>
 <body>
-    <div>
+    <div id="main">
 
     </div>
+    
+
+
+    <!-- <div class="parent">WEEKDAYS
+    <div class="diiv">Mon</div>
+    <div class="diiv">Tue</div>
+    <div class="diiv">Wed</div>
+    <div class="diiv">Sat</div>
+    </div> -->
 </body>
+<script>
+    // const parent = document.querySelector('.parent')
+    // console.log(parent.children)
+    // console.log(parent.childNodes)//Dom is complex tree gives all the values including blank enters or Line break as text so there are 9 (5text, 4div)
+    // const day = document.querySelector('.diiv')//returns first element of this class text that is Mon
+    // console.log(day.parentElement.innerText)
+
+    // console.log(day.nextSibling.innerText)  //this gives text as sibling and innertext is undefined
+    // const nextday = (day.nextElementSibling.innerText)//this gives tue
+    // console.log(nextday.nextElementSibling.innerText)//Wed
+
+const box = document.createElement('div')
+box.className='box'
+box.style.height='100px',
+box.style.width='250px',
+box.style.margin='10px ',
+box.style.border='2px solid black',
+box.style.backgroundColor='purple'
+const text = document.createTextNode('Suprise MF');
+box.style.padding= '30px'
+box.appendChild(text)
+document.body.appendChild(box)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    const newdiv = document.createElement('div')
+    console.log(newdiv)
+    newdiv.id ="newd"
+    newdiv.className= "divnew"
+    newdiv.style.backgroundColor='blue',
+    newdiv.style.color='black',
+    newdiv.style.height='200px',
+    newdiv.style.width='100px'
+    const divtext = document.createTextNode('NAYA HO NAYA')
+    newdiv.appendChild(divtext)
+    document.body.appendChild(newdiv)
+</script>
 </html>
