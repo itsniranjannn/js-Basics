@@ -174,18 +174,17 @@ const human = {
 //ways to get object values
 //  const {color , fullName, age} = human
 //  console.log(`${fullName} is blank and age is ${age}`) 
- console.log(`${human.color} and ${human.age}`)
+//  console.log(`${human.color} and ${human.age}`)
 
- for (y in human){
+//  for (y in human){
 
-  console.log(`${y} equals to ${human[y]}`)
- }
-
-//  const mapp = new Map()
-//  mapp.set('1', 'one')
-//  console.log(mapp)
-//  mapp.get(1)
-
-//  for(let [x, y] of mapp){
-//   console.log(y)
+//   console.log(`${y} equals to ${human[y]}`)
 //  }
+
+ const mapp = new Map()
+ mapp.set('1', 'one')
+ mapp.set("nep", 22)
+ console.log( mapp.get('nep'))
+ console.log(mapp.entries())
+ console.log(mapp.size)
+
