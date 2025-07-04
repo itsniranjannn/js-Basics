@@ -15,8 +15,13 @@
 
  const marks = [100, 93, 99, 91, 96, 98, 97, 94];
 //  console.log(marks.includes(100))
+console.log(marks)
 
- 
+  let sum = marks.reduce(myfunc)     // The reduce() method runs a function on each array element to produce a single value.
+ function myfunc (a , b){
+     return a + b
+ } 
+ console.log('the sum is =' + sum)
 
 
  /*const mm = marks.map(myfunct)   // map is used to map array and create new array
@@ -173,11 +178,11 @@ console.log(sortedobj)
 
  
  //rest to check sum og array
- function sum(...args) {
-  let sum = 0;
-  for (let arg of args) sum += arg;
-  return sum;
-}
+//  function sum(...args) {
+//   let sum = 0;
+//   for (let arg of args) sum += arg;
+//   return sum;
+// }
 
-let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
-  console.log(x)
+// let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
+//   console.log(x)
