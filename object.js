@@ -181,10 +181,16 @@ const human = {
 //   console.log(`${y} equals to ${human[y]}`)
 //  }
 
- const mapp = new Map()
- mapp.set('1', 'one')
- mapp.set("nep", 22)
- console.log( mapp.get('nep'))
- console.log(mapp.entries())
- console.log(mapp.size)
+//  const mapp = new Map()
+//  mapp.set('1', 'one')
+//  mapp.set("nep", 22)
+//  console.log( mapp.get('nep'))
+//  console.log(mapp.entries())
+//  console.log(mapp.size)
+
+//======JSON=====
+// let text = '{ "employees" : [' +'{ "firstName":"John" , "lastName":"Doe" },' +'{ "firstName":"Anna" , "lastName":"Smith" },' +'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+// console.log(text)
+// const obj = JSON.parse(text);
+// console.log(obj.employees[1].firstName+ " "+obj.employees[0].lastName )
 
