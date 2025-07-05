@@ -15,13 +15,13 @@
 
  const marks = [100, 93, 99, 91, 96, 98, 97, 94];
 //  console.log(marks.includes(100))
-console.log(marks)
+// console.log(marks)
 
-  let sum = marks.reduce(myfunc)     // The reduce() method runs a function on each array element to produce a single value.
- function myfunc (a , b){
-     return a + b
- } 
- console.log('the sum is =' + sum)
+//   let sum = marks.reduce(myfunc)     // The reduce() method runs a function on each array element to produce a single value.
+//  function myfunc (a , b){
+//      return a + b
+//  } 
+//  console.log('the sum is =' + sum)
 
 
  /*const mm = marks.map(myfunct)   // map is used to map array and create new array
@@ -137,13 +137,13 @@ const subj = sub.toReversed() //here it  make changes in new array Subj not in s
 //  console.log(marks)
 //  console.log(arr)
 //  console.log("A = ", marks)
-//  const mynew1 = marks.slice(2, 5);  //this extract the index values dont change existing array
-//  console.log(marks)
-//  console.log("slice= ", mynew1)
-
-/* const array2 = marks.splice(2, 4) //this extract the index values and change the existing array also
+ const mynew1 = marks.slice(2, 5);  //this extract the index values dont change existing array
  console.log(marks)
- console.log("Splice= ", array2)
+ console.log("slice= ", mynew1)// in spcified start and end the end is not extracted output --- 99 91 96 end 98 wont count
+
+/* const array2 = marks.splice(2, 4)   // splice(start, deleteCount, item1, item2, ... nth item 
+ console.log("Splice= ", array2)//this extract the index values and change the existing array also
+  console.log(marks)
  marks.unshift(90)  //Adds a new element at the beginning of an array
  marks.shift()   //Removes the first array element
  marks.pop()
@@ -159,7 +159,7 @@ marks.push(101) ; //to add in array
  ///it add 100 99 12 just before 2nd index 
 ///to replace
  marks.splice(2,3,111,200,300)  //       output   [100, 93, 111, 200, 300, 98, 97]
- ///it replaced index 2 - 99, 3- 91 ,4- 96 and added respective values 111, 200, 300 */
+ ///it replaced from 2nd index 99 up to 3 elements and added 111, 200, 300 in place of 99 91 96 respectivly */
 
 // #### Sorting Object
 /* const cars = [
@@ -187,15 +187,18 @@ console.log(sortedobj)
 // let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
 //   console.log(x)
 
-const fruits = new Map([
-  ["apples", 500],
-  ["bananas", 300],
-  ["oranges", 200]
-]);
+// const fruits = new Map([
+//   ["apples", 500],
+//   ["bananas", 300],
+//   ["oranges", 200]
+// ]);
 
-// Iterate the Values
-let text = "";
-for (const x of fruits.keys()) {
-  console.log(x)
-}
-console.log(fruits.get("apples"));
+/// Iterate the Values
+// let text = "";
+// for (const x of fruits.keys()) {
+//   console.log(x)
+// }
+// console.log(fruits.get("apples"));
+
+// const ar = new Int16Array(10);
+// console.log(ar)
