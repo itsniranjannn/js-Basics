@@ -139,6 +139,3 @@
 
 // let values = 19
 // values <= 20 ? console.log("this is less") : console.log("this is more")
-
-
-

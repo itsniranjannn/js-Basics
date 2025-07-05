@@ -47,14 +47,29 @@ transform: translateX(50%); }
     transform: translateX(100%);   
   }
         }
+        .me{
+            text-align: center;
+            height: 100px;
+            width: 100px;
+            transition: width 3s linear , height 3s steps(3);
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .me:hover{
+            width: 300px;
+            height: 300px;
+        }
+        
     </style>
 </head>
 <body>
-    <div id="main">
+    <!-- <div id="main">
 
     </div>
     
-
+<div class="me">ITS TRANSITION</div> -->
 
     <!-- <div class="parent">WEEKDAYS
     <div class="diiv">Mon</div>
@@ -74,44 +89,59 @@ transform: translateX(50%); }
     // const nextday = (day.nextElementSibling.innerText)//this gives tue
     // console.log(nextday.nextElementSibling.innerText)//Wed
 
-const box = document.createElement('div')
-box.className='box'
-box.style.height='100px',
-box.style.width='250px',
-box.style.margin='10px ',
-box.style.border='2px solid black',
-box.style.backgroundColor='purple'
-const text = document.createTextNode('Suprise MF');
-box.style.padding= '30px'
-box.appendChild(text)
-document.body.appendChild(box)
+// function mydiv(){
+// const box = document.createElement('div')
+// box.className='box'
+// box.style.height='100px',
+// box.style.width='250px',
+// box.style.margin='10px ',
+// box.style.border='2px solid black',
+// box.style.backgroundColor='purple'
+// const text = document.createTextNode('Surprise MF');
+// box.style.padding= '30px'
+// box.appendChild(text)
+// document.body.appendChild(box)
+// }
+// mydiv()
 
 
 
 
+const newbutn= document.createElement('button')
+newbutn.style.backgroundColor="red",
+newbutn.style.color='white'
+
+newbutn.innerText= ('Click Here')//1st technique to add text
+
+// const txtinbutn = document.createTextNode('Click Me pls') //2nd technique to add text
+// newbutn.appendChild(txtinbutn)
+
+document.querySelector('body').prepend(newbutn)  //1st tecnique to add in body
+// document.body.prepend(newbutn)  //2nd technique to add in body
+
+const div = document.createElement('div')
+div.style.height='300px',
+div.style.width ='300px',
+div.style.backgroundColor="red",
+div.style.color='white'
+
+const text = document.createTextNode('div')
+div.appendChild(text)
+document.body.appendChild(div)
+
+//edit
 
 
-
-
-
-
-
-
-
-
-
-
-
-    const newdiv = document.createElement('div')
-    console.log(newdiv)
-    newdiv.id ="newd"
-    newdiv.className= "divnew"
-    newdiv.style.backgroundColor='blue',
-    newdiv.style.color='black',
-    newdiv.style.height='200px',
-    newdiv.style.width='100px'
-    const divtext = document.createTextNode('NAYA HO NAYA')
-    newdiv.appendChild(divtext)
-    document.body.appendChild(newdiv)
+    // const newdiv = document.createElement('div')
+    // console.log(newdiv)
+    // newdiv.id ="newd"
+    // newdiv.className= "divnew"
+    // newdiv.style.backgroundColor='blue',
+    // newdiv.style.color='black',
+    // newdiv.style.height='200px',
+    // newdiv.style.width='100px'
+    // const divtext = document.createTextNode('NAYA HO NAYA')
+    // newdiv.appendChild(divtext)
+    // document.body.appendChild(newdiv)
 </script>
 </html>

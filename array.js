@@ -186,3 +186,16 @@ console.log(sortedobj)
 
 // let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
 //   console.log(x)
+
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+// Iterate the Values
+let text = "";
+for (const x of fruits.keys()) {
+  console.log(x)
+}
+console.log(fruits.get("apples"));
