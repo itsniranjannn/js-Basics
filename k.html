@@ -20,6 +20,21 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            
+      animation-timing-function: ease-in;
+     
+            animation:animate 2s infinite  alternate;
+        }
+        @keyframes animate{
+            from 0%{ 
+                background-color: rgb(241, 220, 191);
+                transform: translate(0px);
+            }
+            
+            to{
+                background-color: rgb(255, 0, 0);
+                transform: translate(1420px) ;
+            }
         }
     </style>
 </head>

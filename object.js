@@ -247,3 +247,6 @@ console.log(superheroes.last.worse)//[ 'flash', 'hwakeye', 'groot' ]
 //we assigned the array of worse as a, b, c and destructed the array inside the object worse 
 console.log(a)// output Flash
 console.log(c)//Groot
+
+
+console.log(typeof (new (class { class () {} })))//object

@@ -67,6 +67,11 @@ console.log(num)
  }
  console.log(allOver90)*/
 
+
+ // const finalresult = array.reduce((post, pre)=>{  //this func takes 2 param 
+//  return post > pre ? post : pre;
+// })
+// console.log(finalresult);
  /* let sum = marks.reduce(myfunc)     // The reduce() method runs a function on each array element to produce a single value.
  function myfunc (a , b){
      return a + b
@@ -76,6 +81,8 @@ console.log(num)
  function myfunc(value){
      return  value > 98
  }*/
+
+
 /* console.log(nm)
 console.log(marks.unshift(200)) //same as push but add data in first [200, 100, 93, 99, 91, 96, 98, 97, 94];
 console.log(marks.shift()) //same as pop but delete from first    [93, 99, 91, 96, 98, 97, 94];
@@ -137,9 +144,9 @@ const subj = sub.toReversed() //here it  make changes in new array Subj not in s
 //  console.log(marks)
 //  console.log(arr)
 //  console.log("A = ", marks)
- const mynew1 = marks.slice(2, 5);  //this extract the index values dont change existing array
- console.log(marks)
- console.log("slice= ", mynew1)// in spcified start and end the end is not extracted output --- 99 91 96 end 98 wont count
+//  const mynew1 = marks.slice(2, 5);  //this extract the index values dont change existing array
+//  console.log(marks)
+//  console.log("slice= ", mynew1)// in spcified start and end the end is not extracted output --- 99 91 96 end 98 wont count
 
 /* const array2 = marks.splice(2, 4)   // splice(start, deleteCount, item1, item2, ... nth item 
  console.log("Splice= ", array2)//this extract the index values and change the existing array also
@@ -203,6 +210,17 @@ console.log(sortedobj)
 // const ar = new Int16Array(10);
 // console.log(ar)
 
+arrrray = [1, 4, 6 ,7 , -8]
+let num = arrrray.filter((n)=>{
+    return n%2!=1
+}).reduce((pre, pos)=> pre+pos , 0 )  // 4+6  = 10 then -8
+console.log(num)
+
+ let pos = arrrray.filter((n)=>{
+    return n>=1
+ }).reduce((pre, pos)=> pre+pos , 0 )
+console.log(pos)
+
 
 //=======DESTRUCTING OF ARRAY============
 // const newArray = ["superman", "spiderman", "batman"]
@@ -210,6 +228,6 @@ console.log(sortedobj)
 // console.log(a) // output superman
 // console.log(d)//but d dont have any so it return undefined 
 
-const newArray = ["superman", , "spiderman", "batman"]
-const [a, b, c, d]= newArray 
-console.log(b)// here b has got undef caus there is empty space betn super and spiderman
+// const newArray = ["superman", , "spiderman", "batman"]
+// const [a, b, c, d]= newArray 
+// console.log(b)// here b has got undef caus there is empty space betn super and spiderman

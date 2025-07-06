@@ -125,7 +125,7 @@ console.log(count)
 alphabet("apple");*/
 
 //Call back function
-//--using for each, this is used to extract each element of an array one by one
+//--using for each, this is used to extract each element of an array one by one, this func doesnt returns the value 
 /*const array = [111, 233, 545, 435, 674, 909]; //normal
 array.forEach( function onebyonearray(value){
     console.log(value)
@@ -161,19 +161,41 @@ const array = [100, 233, 456,789, 9999, 463, 766];
     }
 })*/
  
-// const finalresult = array.reduce((post, pre)=>{
+// const finalresult = array.reduce((post, pre)=>{  //this func takes 2 param 
 //  return post > pre ? post : pre;
 // })
 // console.log(finalresult);
 
 
-const marks = [98, 78, 99, 79, 87];
-const ninety = marks.filter((value)=>{
-  if(value>90){
-    console.log("this score is " + value)
-  }
-})
-let ninet = marks.map((value)=>{
- return value > 90
-})
-console.log(ninet)
+// const marks = [98, 78, 99, 79, 87];
+// const ninety = marks.filter((value)=>{
+//   if(value>90){
+//     console.log("this score is " + value)
+//   }
+// })
+// let ninet = marks.map((value)=>{
+//  return value > 90
+// })
+// console.log(ninet)
+
+
+// function firstName(fname, lname){
+//   console.log(`${fname} `)
+//   lname('katwal')
+
+// }
+// firstName("niranjan", lastName)
+
+// function lastName(lname){
+//   console.log(lname)
+// }
+
+// let arra = [1,3,6,9];
+// console.log(arra.length);
+
+// let sqa = []
+// for (let index = 0; index < arra.length; index++) {
+//     sqa.push(arra[index]*arra[index])
+    
+// }
+// console.log(sqa)
