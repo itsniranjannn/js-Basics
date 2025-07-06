@@ -28,7 +28,7 @@ console.log(obj["name"])
 
 
 
-const arr = new Array(1, 2)
+const arr = new arr(1, 2)
 console.log(arr);
 
 const onnj = new Object ({name: "niranjan", age : 22,})
@@ -165,12 +165,27 @@ const human = {
 //  console.log(`my age is ${me.age} `)
 
 
- const human = {
-  color : "white",
-  age : 21, 
-  address : "nepal",
-  fullName : "Niranjan",
- }
+
+//  const human = {
+//   color : ["white", "black", {
+//     one:"light",
+//     two:"dark"    
+//   }] ,
+//    age :{
+//       curage:{
+//         current: 20+1
+//       },
+//       prevage: "20"
+//    }, 
+//   address : "nepal",
+//   fullName : "Niranjan"
+//  }
+//  console.log(human.address)
+//  console.log(human.color[2].one)
+//  console.log(human.age.curage.current)
+
+
+
 //ways to get object values
 //  const {color , fullName, age} = human
 //  console.log(`${fullName} is blank and age is ${age}`) 
@@ -179,7 +194,7 @@ const human = {
 //  for (y in human){
 
 //   console.log(`${y} equals to ${human[y]}`)
-//  }
+//  };
 
 //  const mapp = new Map()
 //  mapp.set('1', 'one')
@@ -194,3 +209,41 @@ const human = {
 // const obj = JSON.parse(text);
 // console.log(obj.employees[1].firstName+ " "+obj.employees[0].lastName )
 
+
+
+
+
+//=============DESTRUCTING OF OBJECT=============
+const superheroes ={
+  top: "Superman",
+  mid: "Ironman",
+  last:{
+    shit: "Vision",
+    worse: ["flash", "hwakeye", "groot"]
+  } 
+}
+//let {a, b, c, d} = superheroes  // in object we cant destructure by using different names rather than declared like an array
+
+// let {top, mid, last} = superheroes
+// console.log(top)//output =  Superman
+// console.log(mid)// output = Ironman
+// console.log(last)//output = { shit: 'Vision', worse: [ 'flash', 'hwakeye', 'groot' ] }
+
+// if we want destructure with desired name we can do like this using : to assign new name
+
+// let{ top: legend, mid: okok, last: bad} = superheroes
+// console.log(okok) //Ironman is output
+
+// let{ top: legend, mid: okok, last:{shit:tatti, worse: gu}} = superheroes
+// console.log(superheroes.last.shit)// vision
+// console.log(tatti)//vision
+
+// console.log(gu); //output [ 'flash', 'hwakeye', 'groot' ]
+
+
+// since the last object has two object and inside worse there is an array we can destructure like this [] assigning desired name in array
+let{ top: legend, mid: okok, last:{shit:tatti, worse:[a, b, c]}} = superheroes
+console.log(superheroes.last.worse)//[ 'flash', 'hwakeye', 'groot' ]
+//we assigned the array of worse as a, b, c and destructed the array inside the object worse 
+console.log(a)// output Flash
+console.log(c)//Groot

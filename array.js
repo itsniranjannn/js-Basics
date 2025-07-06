@@ -202,3 +202,14 @@ console.log(sortedobj)
 
 // const ar = new Int16Array(10);
 // console.log(ar)
+
+
+//=======DESTRUCTING OF ARRAY============
+// const newArray = ["superman", "spiderman", "batman"]
+// const [a, b, c, d]= newArray   //destructing an array here a b c are assiged to sup, spi, and bat 
+// console.log(a) // output superman
+// console.log(d)//but d dont have any so it return undefined 
+
+const newArray = ["superman", , "spiderman", "batman"]
+const [a, b, c, d]= newArray 
+console.log(b)// here b has got undef caus there is empty space betn super and spiderman

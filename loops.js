@@ -157,3 +157,24 @@ for (const v in arr){// output 0 1 2 3 4 5 For in in array gives only index posi
 // ]
 // const p2p = shoppingCart.reduce((pos , items)=> pos + items.price , 0)
 // console.log(p2p);  //here reduce is used to get sum of price from object
+
+// const arr = [1, 2, 3, 4]
+// let y = [];
+// for (let i = 0; i < arr.length; i++) {
+//  y.push(arr[i] ** arr[i]);
+// }
+// console.log(y)
+// for (x of arr){
+//  console.log("x=", x**2)
+// }
+
+const color ={
+  pri : 'blu',
+  sec : 'red'
+}
+for (i in color){
+  console.log(color[i])
+}
+for(let i = 10; i >= 10 ; i--){
+ console.log(i);
+}
