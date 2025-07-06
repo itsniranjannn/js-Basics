@@ -199,3 +199,40 @@ const array = [100, 233, 456,789, 9999, 463, 766];
     
 // }
 // console.log(sqa)
+
+
+// function BankAccount(acnum, acHolname, bal) { // this is constructor
+//     let _acnum = acnum;
+//     let _acHolname = acHolname;
+//     let _bal = bal;
+  
+
+//     function deposit(amount) {  //function to deposit 
+//         _bal += amount;
+//         showAccountDetails();
+//     }
+
+//     function withdraw(amount) {  //functio to withdraw
+//         if (_bal >= amount) {  //if balance is more than withdraw amount , it will be withdraw
+//             _bal -= amount;
+//             showAccountDetails();
+//         } else {               //otherwise returns below
+//             console.log("Insufficient bal ");   
+//         }
+//     }
+
+//     return {
+//         deposit: deposit,
+//         withdraw: withdraw
+//     };
+//       function showAccountDetails() {
+//         console.log(`Account Number: ${_acnum}`);
+//         console.log(`Account Holder Name: ${_acHolname}`);
+//         console.log(`bal: ${_bal}`);
+//     }
+// }
+// let details = new BankAccount(10002, "Niranjan", 10000)
+
+// details.deposit(5000); //output bal= 15000
+
+// details.withdraw(20000); // Output: Insufficient Balance
