@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proj 1</title>
+    <style>
+        body{
+            color: rgb(255, 255, 255);
+            background: teal;
+        
+        }
+        p, h1{
+            display: flex;
+            justify-content: center;
+        }
+        div{
+
+            height: 450px;
+            width: 1300px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+               
+        }
+        .buttons{
+
+            height: 100px;
+            width: 100px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #red{
+            background: rgb(199, 24, 24);
+        }
+        #blue{
+            background: rgb(66, 49, 214);
+        }
+        #purple{
+            background: rgb(173, 50, 169);
+        }
+        #cyan{
+            background: rgb(61, 219, 172);
+        }
+        #reset{
+            background: rgb(255, 203, 203);
+            transform: translate(0px, 200px);
+        }
+    </style>
+</head>
+<body>
+    <h1>Color Selector</h1>
+    <div> 
+        <h1>Select a color </h1> 
+        <button class="buttons" id="red">Red</button>
+        <button class="buttons" id="blue">Blue</button>
+        <button class="buttons" id="purple">purple</button>
+        <button class="buttons" id="cyan">Cyan</button>
+        
+        <button class="buttons" id="reset">RESET</button>
+    </div>
+    
+    <p>this  will change the bg color automatically</p>
+
+    <script>
+        const body = document.querySelector('body')
+        const button = document.querySelectorAll('.buttons')
+        console.log(button)
+        button.forEach(function(button){
+            button.addEventListener('click', function(justclick){
+                if(justclick.target.id === 'red'){
+                 body.style.backgroundColor = 'FireBrick',
+                 button.style.color='white'
+                } if(justclick.target.id == 'blue' ){
+                    body.style.backgroundColor = 'royalblue'
+                    button.style.color='white'
+                }if(justclick.target.id == 'purple' ){
+                    body.style.backgroundColor = 'rebeccapurple'
+                    button.style.color='white'
+                }if(justclick.target.id == 'cyan' ){
+                    body.style.backgroundColor = 'darkcyan'
+                    button.style.color='white'
+                }
+                if(justclick.target.id == 'reset')
+                body.style.backgroundColor ='teal'
+            button.style.color='white'
+            })
+        })
+
+    </script>
+</body>
+</html>
