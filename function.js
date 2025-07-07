@@ -205,7 +205,12 @@ const array = [100, 233, 456,789, 9999, 463, 766];
 //     let _acnum = acnum;
 //     let _acHolname = acHolname;
 //     let _bal = bal;
-  
+
+//   function showAccountDetails() {
+//         console.log(`Account Number: ${_acnum}`);
+//         console.log(`Account Holder Name: ${_acHolname}`);
+//         console.log(`bal: ${_bal}`);
+//     }
 
 //     function deposit(amount) {  //function to deposit 
 //         _bal += amount;
@@ -225,11 +230,7 @@ const array = [100, 233, 456,789, 9999, 463, 766];
 //         deposit: deposit,
 //         withdraw: withdraw
 //     };
-//       function showAccountDetails() {
-//         console.log(`Account Number: ${_acnum}`);
-//         console.log(`Account Holder Name: ${_acHolname}`);
-//         console.log(`bal: ${_bal}`);
-//     }
+//   
 // }
 // let details = new BankAccount(10002, "Niranjan", 10000)
 
