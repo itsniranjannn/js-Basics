@@ -60,11 +60,11 @@
 //     }
 // }
 
-class plants{
-    habit(){
-        console.log("plants are boon for nature");
-    }
-}
+// class plants{
+//     habit(){
+//         console.log("plants are boon for nature");
+//     }
+// }
 
 
 // const Humans = new person ()
@@ -92,15 +92,60 @@ class plants{
 
 // console.log(niranjan)
 
-function meroBiopic(bani, ship){     //here i have created a func with 2 param 
-    let habit = bani;    //this has accessed the params 
-    this.skill =  ship;
-    this.getName = ()=>{   //here after placing in this getname func when we log niranjan we get  meroBiopic { skill: 'keixaina', getName: [Function (anonymous)] }
-              return habit
-    }
-}
+// function meroBiopic(bani, ship){     //here i have created a func with 2 param 
+//     let habit = bani;    //this has accessed the params 
+//     this.skill =  ship;
+//     this.getName = ()=>{   //here after placing in this getname func when we log niranjan we get  meroBiopic { skill: 'keixaina', getName: [Function (anonymous)] }
+//               return habit
+//     }
+// }
 
-let niranjan = new meroBiopic("overthink", "keixaina")
-console.log(niranjan) //meroBiopic { skill: 'keixaina', getName: [Function (anonymous)] } Wont get access as its anonymous
-//unless we console getName function then we get the access
-console.log(niranjan.getName())   //finally we get the output -> overthink
+// let niranjan = new meroBiopic("overthink", "keixaina")
+// console.log(niranjan) //meroBiopic { skill: 'keixaina', getName: [Function (anonymous)] } Wont get access as its anonymous
+///unless we console getName function then we get the access
+// console.log(niranjan.getName())   //finally we get the output -> overthink
+
+
+//---------------prototype---------------------
+//=====EX 1=======
+// function hero (name, power){
+//     this.realName = name;
+//     this.strength = power;
+//     this.getNameAndPower = () => {  //here the function gets called with each object , so we use prototype to over come this
+//          console.log(`His realname is ${this.realName} and superpower is ${this.strength}`)
+//     }
+// }
+
+// let spiderman = new hero("PeterParker", "SpiderWave")
+// console.log(spiderman)// output : hero { realName: 'PeterParker', strength: 'SpiderWave', getNameAndPower: [Function (anonymous)]}
+// console.log(spiderman.getNameAndPower())
+
+ 
+//AFTER USING A PROTOTYPE - function will be iside the object
+// function hero (name, power){
+//     this.realName = name;
+//     this.strength = power;
+
+// }
+ 
+// hero.prototype.getNameAndPower = function()  {  //dont use arow fuction in prototype and this key , cause it makes scope of this to global object that returns undefined
+//          console.log(`His realname is ${this.realName} and superpower is ${this.strength}`)
+//     }
+// let spiderman = new hero("PeterParker", "SpiderWave")
+// console.log(spiderman)// output hero { realName: 'PeterParker', strength: 'SpiderWave' }
+// console.log(spiderman.getNameAndPower())// output His realname is PeterParker and superpower is SpiderWave
+
+//===Ex 2===
+function materials( rawm, paisa){
+    this.kachha = rawm;
+    this.price =paisa
+}
+materials.prototype.getMaterials= function (){   //this  is prototype func works in any new obbject that is created 
+     console.log(`yesko lagi yo ${this.kachha} chainxa ani yeti kharcha lagxa ${this.price}`)
+}
+//  let ghar = new materials("itta ra baluwa", 300000 + 200000)
+//  console.log(ghar)  //materials { kachha: 'itta ra baluwa', price: 500000 }
+//  console.log(ghar.getMaterials())  //yesko lagi yo itta ra baluwa chainxa ans yeti kharcha lagxa 500000
+
+ const juice = new materials("pani ani chini", 20)
+console.log(juice.getMaterials())       //yesko lagi yo pani ani chini chainxa ani yeti kharcha lagxa 20
