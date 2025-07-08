@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple clock</title>
+   <link rel="stylesheet" href="style.css">
+   <style>
+    .outer{
+        margin: 100px 0px 100px 500px;
+        background-color: black;
+        text-align: center;
+        color: White;
+        font-size: large;
+        height: 300px;
+        width: 300px;
+        padding-top: 10px;
+       
+        
+    }
+    .clock{
+        width: 150px;
+        height: 60px;
+        background: #ff0000;
+        margin-left: 75px;  
+        margin-top: 30px;
+        font-size: large;
+    }
+    .date{
+        height: 50px;
+        width: 200px;
+        margin-top: 30px;
+        margin-left: 50px;
+        background-color:blueviolet
+    }
+    .date-style {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  padding-top: 15px;
+}
+.time-style {
+   font-size: 30px;
+   padding-top: 20px ;
+}
+   </style>
+</head>
+<body>
+<header>
+    <ul>
+        <li class="logo"><h1>NIRANJAN</h1></li>
+        <li><a href="proj1.html">Proj 1</a></li>
+        <li><a href="proj2.html">Proj 2</a></li>
+        <li><a href="proj3.html">Proj 3</a></li>
+</ul>
+</header>
+<div class="outer"><h2>Here is your D.clock</h2>
+
+<div class="date"></div>
+<div class="clock"></div>
+</div>
+<script>
+    const clock= document.querySelector('.clock');
+    const newdate = document.querySelector('.date');
+    
+    setInterval(function(){
+        const date = new Date()
+        newdate.innerHTML = date.toDateString();
+        newdate.classList.add('date-style');//for styling add a class list
+    })
+
+        setInterval(function(){
+        const time = new Date() 
+        clock.innerHTML = time.toLocaleTimeString();
+        // clock.style.fontSize = '30px', // we can add style via this too
+        clock.classList.add('time-style');
+        
+    }, 1000)
+</script>
+</body>
+</html>
