@@ -4,64 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 2</title>
-    <style>
-        body{
-            background: #818181;
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        h1{
-            text-align: center;
-        }
-        div{
-            height: 400px;
-            width: 400px;
-           padding-left: 30px;          
-        }
-       #height,
-#weight {
-  width: 200px;
-  height: 25px;
-margin : 10px;
-font-size: medium;
+    <link rel="stylesheet" href="style.css">
+    <style>body{
+        background: linear-gradient(teal, cadetblue, cornflowerblue);    }
+ .container{
+    height: 520px;
+    width: 400px;
+    display: block;
+    justify-content: center;
+    margin-left: 500px;
+    margin-top: 20px;
+    background: grey;
+    padding-left: 20px;
+    padding-top: 10px;
+ }
+#height, #weight {
+        width: 200px;
+        height: 25px;
+        margin : 20px;
+        font-size: medium;
+        justify-content: center;
+} 
+.height,.weight{
+    margin : 20px;
 }
 button{
     width: 100px;
     height: auto;
     border-radius: 10px;
-    margin: 15px 0px  0px 110px;
+    margin: 15px 0px  10px 130px;
     padding: 10px;
 }
-.guide{
-    height: 200px;
-    width: 300px;
-    margin: 15px 0px  0px 40px;
+h1, h3{
+    text-align: center;
+    color: yellow;
 }
 #results{
-    margin-top: 20px ;
-    height: 30px;
+    margin: 20px 0px 20px 20px;
+    color: rgb(255, 255, 255);
+    font-size: medium;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
+p{
+    margin: 20px;
+}
     </style>
 </head>
 <body>
+    <header>
+        <ul>
+        <li class="logo"><h1>NIRANJAN</h1></li>
+        <li><a href="proj1.html">Proj 1</a></li>
+        <li><a href="proj2.html">Proj 2</a></li>
+        <li><a href="proj3.html">Proj 3</a></li>
+        </ul>
+    </header>
     
-    <div class="container">
-        <h1>BMI Calculator</h1>
-<form action="">
-        <label for="height" class="height"> Height: </label> <input type="text" name="height" id="height" class="input"><br>
-    <label for="weight" class="weight"> Weight: </label> <input type="text" name="" id="weight" class="input">
-<button>Calculate</button> 
- <div id="results">result : </div> 
-</form>  
-<div class="guide">
-<h3>BMI Weight Guide</h3>
+<div class="container">
+          <h1>BMI Calculator</h1>
+         <form action="">
+          <label for="height" class="height"> Height: </label> <input type="text" name="height" id="height" class="input"><br>
+         <label for="weight" class="weight"> Weight: </label> <input type="text" name="" id="weight" class="input"><br>
+              <button>Calculate</button> 
+        <div id="results">Result : </div> 
+        </form>  
+     <div class="guide">
+           <h3>BMI Weight Guide</h3>
           <p>Under Weight = Less than 18.6</p>
           <p>Normal Range = 18.6 and 24.9</p>
           <p>Overweight = Greater than 24.9</p>
-          </div>
+     </div>
 </div>
 <script>
     const form = document.querySelector('form')
