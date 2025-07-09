@@ -21,16 +21,32 @@
 <body>
 <div class="outer">
     <div class="events"></div></div>
-
+    <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">GOOGLE</a>
 
     <script>
-        //we used below code to learn the pointer events like type, key codes, (tilt, screen, page, client)X and Y, target, target element, current element ,src element, pointer type etc
+
+//we used below code to learn the pointer events like type, key codes, (tilt, screen, page, client)X and Y, target, target element, current element ,src element, pointer type etc
     // keys code in events
     // enter 13, escape 27, space 32,   left 37 up 38 right 39 down 40   A-Z keys => code  65-90 ||  0-9keys => 48-57
         // const event = document.querySelector('.events')
         // event.addEventListener('click', function(jclick){
         // console.log(jclick)
         // },false)
+
+
+
+
+
+
+//>>>>>>Prevent Default<<<<<<<<<<<<<<<
+//this method helps to prevent from submissions, toggling in checkboxes , link navigations 
+// document.querySelector('a').addEventListener('click', function(e){
+//     e.preventDefault() //when i used this method i prevent me from going to link of google.com
+//     console.log('i just pressed Google.com')// got this in console    =>    i just pressed Google.com
+// })
+
+
+
 
 
 //>>>>>>>>>>>>>>>>>>>>Event Propagation<<<<<<<<<<<<<<<<<<<<<<<<<//
