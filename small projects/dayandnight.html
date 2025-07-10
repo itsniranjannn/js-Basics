@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day and Night</title>
+    <style>
+      
+        .over{
+            margin: 10px 0px 0px 700px;
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .circle{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: black;
+            color: white;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid white;
+        }
+    .day{
+        background-color:  #fbff7c;
+    }
+    .night{
+        background-color: #212121;        
+    }
+    .rainy{
+        background: #bbe4e9;
+    }
+    </style>
+</head>
+<body>
+    <div class="circle">Click Me</div>
+    <div class="over">Hover Me</div>
+
+</body>
+<script>
+
+    const body = document.querySelector('body')
+    
+    const div = document.querySelector('.circle')
+    const div2 =  document.querySelector('.over')
+
+ 
+
+    let mode = 'day';
+div.addEventListener('click', function(){
+    if(mode == 'day'){
+        mode = 'night'
+        body.classList.add('night')
+        body.classList.remove('day')
+        body.classList.remove('rainy')
+        div.innerHTML = `I am nOOny `
+        div.style.backgroundColor = '#F5F5DC '
+        div.style.color = 'Grey'
+    }
+    else{
+        mode = 'day'
+        body.classList.add('day')
+        body.classList.remove('night')
+        body.classList.remove('rainy')
+        div.innerHTML = `I am Sunny`
+        div.style.backgroundColor = '#FFCC33'
+        div.style.color = 'red'
+    }
+    console.log(mode)
+})
+   div2.addEventListener('mouseover', function(e){
+    body.classList.add('rainy')
+    
+    div.innerHTML= `I am Rainy` 
+    div.style.backgroundColor = '#9fd3c7'
+    div.style.color = '#7c73e6'
+  
+})
+</script>
+</html>
