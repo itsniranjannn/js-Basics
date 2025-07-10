@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventS</title>
+    <style>
+        div{
+            height: 200px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: cadetblue;
+        }
+        .dark{
+            background: #000;
+            color: white;
+        }
+        .light{
+            background: yellow;
+            color:black;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div> -->
+        <button >Click here</button>
+        <p>Welcome to Day and Night</p>
+    <!-- </div> -->
+    <script>
+//task is to create button that makes dark when clicked once and light clicked twice
+let body = document.querySelector('body')
+let button = document.querySelector('button')
+
+//--------Ye he aam Jindagi-------------
+
+// button.addEventListener('click', function(){
+//     body.style.backgroundColor = '#212121'
+// })
+// button.addEventListener('dblclick', function(){
+//     body.style.backgroundColor= 'white'
+// })
+
+//~~~~~~~~~~~~Ye he mentos Jindagi~~~~~~~~~~~~
+// let mode = 'light';
+// button.addEventListener('click', function(){
+//     if(mode == 'light'){
+//         mode = 'dark'
+//         body.style.backgroundColor = '#212121'
+//         body.style.color = 'white'
+//     }
+//     else{
+//         mode = 'light'
+//         body.style.backgroundColor= 'white'
+//         body.style.color = 'black'
+//     }
+//     console.log(mode)
+// })
+
+//And this is my jindagi
+let mode = 'light';
+button.addEventListener('click', function(){
+    if(mode == 'light'){
+        mode = 'dark'
+        body.classList.add('dark')
+        body.classList.remove('light')
+    }
+    else{
+        mode = 'light'
+        body.classList.add('light')
+        body.classList.remove('dark')
+    }
+    console.log(mode)
+})
+
+
+    //approach 1 to add events
+// let button = document.querySelector('button')
+// button.onclick= function(events){
+// console.log('yuu clickkk the button') //we experience propagation from button to div
+
+// events.stopPropagation()//this stops the propagation
+// }
+
+//approach 2 
+// document.querySelector('div').addEventListener('click',function (event){
+//     console.log('youu click the div');
+
+// })
+
+// document.querySelector('body').addEventListener('mouseout', function (){
+//    this.style.backgroundColor = 'blue'  // this change the color of body when mouse is clicked, over  or mouse out resp to event type 
+// })
+
+// const onclick =  function(){
+//  button.style.backgroundColor = 'cornflowerblue'
+// }
+// button.addEventListener('click', onclick)//this add event
+// // button.removeEventListener('click', onclick)// this removes event but type of event and function must be same as add 
+
+    </script>
+</body>
+</html>
