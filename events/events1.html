@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - In JS</title>
+    <style>
+       img{
+            height: 200px;
+            width: 200px;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="one"><img src="https://shorturl.at/rPMpO" alt="nature"></li>
+        <li class="one"><img src="https://shorturl.at/uMZdn" alt="pets" ></li>
+        <li class="one"><img src="https://shorturl.at/kfSs9" alt="lion"></li>
+        <li class="one"><img src="https://shorturl.at/YIoIX" alt="rab-bit"></li>
+    </ul>
+    <script>
+        document.querySelector('ul').addEventListener('click', function(event){
+            // console.log(event.target.parentNode)
+   // const removeimg = event.target.parentNode//here we selected the parent node of targeted image i.e. Li
+    //while using remove() , when we click in list all UL will be remove cause parent of Li is Ul
+// removeimg.remove();      //1st approach to remove the image when clicked
+// removeimg.parentNode.removeChild(removeimg) //2nd approach to remove 
+
+// using  this remove on parent node makes error, when image is clicked its parentNode li is removed,
+//  and when li is clicked its parent node Ul is deleted, to solve this we use tagName
+if(event.target.tagName === 'IMG'){  //by doing this only img can be clicked not li , when img is clicked its parent li is removed
+    console.log(`image of ${event.target.alt} got removed`) 
+    let removeimage = event.target.parentNode
+    removeimage.remove()
+}
+        }, false)
+    </script>
+</body>
+</html>
