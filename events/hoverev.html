@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOUSE OVER</title>
+    <style>
+
+        .parent{
+            height: 200px;
+            width: 200px;
+            background-color: blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 200px 0px 0px 550px;
+        }
+
+        .child{
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+        }
+        /* @media(min-width : 400px ) and (max-width: 1000px){ //between min 400 to max  1000 body color change
+            body{
+                background: #000;
+                
+            }
+        } */
+         /* @media(max-width : 800px) { //this means upto 800px color remains aqua
+            body{
+                background-color: aqua;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="parent"><div class="child"></div></div>
+
+    <script>
+        
+        let body = document.querySelector('body')
+       let parent = document.querySelector('.parent')
+    let child = document.querySelector('.child')
+
+    parent.addEventListener('mouseout', function(){
+            body.style.backgroundColor ='purple'
+                 })
+       child.addEventListener('mouseover', function(){
+            body.style.backgroundColor ='black'
+        })
+       window.addEventListener("resize", function(event) {
+  // Code to execute when the window is resized
+  body.style.backgroundColor = 'firebrick'
+  console.log("Window resized!");
+  console.log("New width: " + window.innerWidth); //this  give width of window 
+  console.log("New height: " + window.innerHeight);//this gives height of window
+});
+    </script>
+</body>
+
+</html>
