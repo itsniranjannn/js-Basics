@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body{
+     text-align: center;
+     background-color: #759AAB;
+}
+h1{
+    height: 6rem;
+    line-height: 6rem;
+    background-color: #1C1F33;
+    color: #F7ECE1;
+}
+
+.choices{
+    height: 35vh;
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice{
+    height: 25vh;
+    width: 25vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+img{
+     height: 22vh;
+    width: 22vh;
+    object-fit: cover;
+     border-radius: 50%;
+    object-fit: cover;
+}
+.choice:hover{
+    background-color: #401F3E;
+    cursor: pointer;
+}
+
+.score{ 
+     display: flex;
+     justify-content: center;
+     gap: 100px;
+}
+
+.uScore, .cScore{
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 25px;
+color: #462255;
+padding: 10px;
+cursor: not-allowed;
+}
+ 
+
+.userPoint , .comPoint {
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 3rem;
+    font-size: 3rem;
+    color: #DDFFF7;
+    height: 50px;
+    width: 70px;
+    border: 1px solid #ffffff;
+    margin: 15px;
+    background-color: #59656F;
+
+}
+
+.messagecon{
+    margin: 1rem;
+      
+}
+
+
+.result{
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #462255;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    display: inline;
+    border-radius: 10px;
+
+}
+
+button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #0D1821;
+    color:  white;
+    border-radius: 10px ;
+    height: 30px;
+    width: 80px;
+}
+
+.foot{
+    
+    font-size: 20px;
+    background-color: #0B0500;
+    margin-bottom: 10px;
+    color: rgb(250, 250, 250);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    
+}
