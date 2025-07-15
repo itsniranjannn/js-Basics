@@ -19,3 +19,28 @@
 // async function greetall() {   //this is Async func
 //    await greet()  //this is  await, this wait function to execute first
 // }
+
+
+
+function user (name){
+    return new Promise((resolve, reject)=> {
+    setTimeout(()=>{
+        console.log('New user here... WELCOME', name);
+
+       resolve('gotch u') 
+    //    reject('gotch u') //this is seen in console if this runs  Uncaught (in promise) gotch u  [[PromiseState]]: "rejected"[[PromiseResult]]: "gotch u"
+    }, 3000)
+
+})        
+}
+
+async function userdetails (){
+     await user('niranjan')  //this executes first 
+
+     await user ('Shatya')   //after 3 sec this executes
+}
+
+
+// user('niranjan').then((res)=>{  //we can also apply .then for resolve and .catch for reject 
+//   console.log(`promise resolved `, res)
+// })
