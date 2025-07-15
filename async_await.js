@@ -44,3 +44,47 @@ async function userdetails (){
 // user('niranjan').then((res)=>{  //we can also apply .then for resolve and .catch for reject 
 //   console.log(`promise resolved `, res)
 // })
+
+
+
+
+
+//==== IIFE IN ASYNC =====
+// IIFE is a immediately invoked function // noo need of function  name and no need dto execute the function again
+// -- IIFE are not reusable
+// (function(){  //>>normal IIFE
+//      console.log(`hooo hooo  IIFE hoo`)   //no need to execute
+// })();
+
+// (()=>{    //>>>> Arrow function
+// console.log(`yo pani IIFE NAI ho tara Arrow function ma`)
+// })()
+
+
+// IIFE EXAMPLE IN ABOVE ASYNC AWAIT EXAMPLE
+// function user (name){
+//     return new Promise((resolve, reject)=> {
+//     setTimeout(()=>{
+//         console.log('New user here... WELCOME', name);
+//        resolve('gotch u') 
+//     }, 4000)
+
+// })        
+// }
+//this is normal async func 
+// async function userdetails (){
+//      await user('niranjan')  
+//      await user ('Shatya')   
+// }
+
+//aplying normal IFFE 
+(async function (){  //removed name userdetails fron func 
+     await user('niranjan')  //New user here... WELCOME niranjan
+     await user ('Shatya')   //New user here... WELCOME Shatya  after 4 sec of above 
+})();
+
+//applying IFFE Arow Function
+(async()=>{ // removed the function also after async 
+     await user('niranjan')  
+     await user ('Shatya')   
+})();
