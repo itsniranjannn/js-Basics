@@ -63,7 +63,7 @@
 //  })
 
 
-//>>>>>>>>>>>>>>>>>>>>>>>>>>Promise chianing  === promise inside promise<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//>>>>>>>>>>>>>>>>>>>>>>>>>>  Promise chianing  === promise inside promise  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 // function promise1(){ 
 //     return new Promise ((resolve, reject) =>{
@@ -105,7 +105,7 @@
 
 
 
-//doing promise chaining in the call back hell problem qn
+//           doing promise chaining in the call back hell problem qn
 
 // function user (userid, getNextuser){
 //     return new Promise((resolve, reject)=> {
@@ -127,7 +127,7 @@
 //     });
 // });
 
-//=======Solution by promise chaining===========
+//          =======Solution by promise chaining===========
 // there is function getnewuser called after  we can do this, but its not good and valid 
 // here first id 1 will be print, 3s after id 2 then id 3 and 4 in same time cause no func in user (3)
 // user(1, ()=>{
@@ -167,3 +167,28 @@
 //      user(3)   //after 3 sec = 3000 ms of user2
 //     })
 // })
+
+
+
+//------------------- ASYNC AND AWAIT ------------------
+// Async and await is a solution for callback hell and promise chaining 
+
+// function user (userid){
+//     return new Promise((resolve, reject)=> {
+//     setTimeout(()=>{
+//         console.log('Id = ', userid);
+//        resolve('gotch u', userid)
+//     }, 3000)
+// })        
+// }        //using async await gives clean and great code in comparison of using promise chaining and callback hell
+
+//  async function UserId() {  //we crrated a async function
+//     console.log(`waiting user1...`)
+//     await user(1)  //every time await is called it will wait the promise to settle and then next
+// console.log(`waiting user2...`)
+//     await user(2)
+// console.log(`waiting user3...`)
+//     await user(3)
+//  }
+
+//  UserId()
