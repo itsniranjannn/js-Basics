@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set and clear</title>
+</head>
+<body>
+    <h1>TIMEOUT func</h1>
+    <button>clear</button>
+
+    <script>
+ //normal set timeout func, executes after the given time in milisecond
+// setTimeout(()=>{    
+//     console.log(`hell`)
+// },2000)
+
+//in sest time out we can pass a func refrence 
+let changetxt = function(){    //we declared a var for function 
+    document.querySelector('h1').innerHTML = 'just use set timeout'  //selected h1 then change its inner text
+}
+// setTimeout(changetxt, 3000)    //here we pass the function changetxt then time to set 
+
+//for using clear timeout we need assign variable to set timeout 
+
+let cleartxt = setTimeout(changetxt, 3000)  //we assign variable to set-timeout here
+//cleartimeout(cleartxt) //this immediately stops the settimeout
+
+//applying cleartimeout in button
+document.querySelector('button').addEventListener('click', function(){  //we add a eventlistener in button with click function
+clearTimeout(cleartxt)  // then we use the clear timeout and pass the variable nabe of settimeout
+console.log('stopped from change of h1')
+})
+    </script>
+</body>
+</html>
