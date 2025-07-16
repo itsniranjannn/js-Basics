@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      h1{
+        text-align: center;
+        color: white;
+        background-color: black;
+     }
+     div{
+        height: 300px;
+        width: 1300px;
+        
+     }
+     button{
+        margin: 100px 0px 0px 400px;
+        height: 50px;
+        width: 100px; 
+     }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li class="logo"><h1>NIRANJAN</h1></li>
+            <li><a href="proj1.html">Project 1</a></li>
+            <li><a href="proj2.html">Project 2 </a></li>
+            <li><a href="proj3.html">Project 3 </a></li>
+            <li><a href="proj4.html">Project 4 </a></li>
+            <li><a href="dayandnight.html">Project 5 </a></li>
+            <li><a href="proj6.html">Project 6 </a></li>
+            <li><a href="proj7.html">Project 7 </a></li>
+            <li><a href="proj8.html">Project 8 </a></li>
+            <li><a href="proj9.html">Project 9 </a></li>
+            <li><a href="proj10.html">Project 10 </a></li>
+        </ul>
+    </header>
+
+<h1>Unlimited Color Changes In Background</h1>    
+<div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</div>
+
+<script>
+
+const randcolor = function(){     //created func
+    const Hex = '0123456789ABCDEF';  //have values for hex
+     let color = '#';
+     for(i=0; i<6; i++){   //run forloop for assigning vaalue to color 
+        color += Hex[Math.floor(Math.random() * 16)]   //used math.random for getting random numbers up to 16 
+     } 
+     return color;//returned color
+}
+
+let colorIn   //declared colorIn for global scope after assiging var to setinterval
+
+const startcolor = function(){        
+    if(!colorIn){
+         colorIn =  setInterval(()=>{
+            console.log(`Started`)
+                 let body = document.querySelector('body')
+                 body.style.backgroundColor = randcolor();
+                 }, 1000)
+}
+}
+
+const stopcolor = function(){
+    console.log('stopped')
+    clearInterval(colorIn)
+    colorIn = null;
+}
+
+
+document.querySelector('#start').addEventListener('click', startcolor)
+
+document.querySelector('#stop').addEventListener('click', stopcolor)
+
+</script>
+</body>
+</html>
+
+<!--        
+///my chatur method to do same thing of above
+ document.querySelector('#start').addEventListener('click',function(){
+    colorIn =  setInterval(()=>{
+       console.log(`clicked`)
+       let body = document.querySelector('body')
+       body.style.backgroundColor = randcolor();
+    }, 1000)
+
+document.querySelector('#stop').addEventListener('click', function(){
+    clearInterval(colorIn)
+})
+}) -->
