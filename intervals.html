@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERVALS</title>
+</head>
+<body>
+    <h1>Set Interval and Clear Interval</h1>
+    <button id="one">set</button>
+    <button id="two">clear</button>
+
+<script>
+    //simple set and clear interval example
+// const interval =  setInterval(()=>{   //here i assign a variable
+//             console.log(`is it a interval`)
+//         }, 1000)
+//         clearInterval(interval) // here i provide refrence of set interval
+
+
+// lets take above html buttons to set and clear interval
+
+    document.querySelector('#one').addEventListener('click', function(){   //here i take button id=one to set interval
+        console.log(`Interval is set`)
+        let time = function(str){       //assign a var time to a func with str param to give refrence in setinterval
+        console.log(str, new Date().toLocaleTimeString())   //here i have pass the argument str with date that give time
+        }
+const settime = setInterval(time, 2000, 'hi i am niranjan whats a cur time')  //passed the  time func in set interval and assign it a var too
+
+//here i have took button id=two for clearInterval inside same func of first button to access the variable declare of set interval
+         document.querySelector('#two').addEventListener('click', function(){ 
+            console.log(`Interval is cleared`)
+            clearInterval(settime)   //here settime is passed to clear interval
+         })
+    })
+    
+</script>
+</body>
+</html>
