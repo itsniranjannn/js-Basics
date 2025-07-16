@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keys -_- Game</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-color: #1c1c1c;
+        }
+      table,
+      th,
+      td {
+        height: 50px;
+        text-align: center;
+        border: 2px solid #ffffff;
+        border-collapse: collapse;
+      }
+      th:hover {background-color: coral;}
+      td:hover {background-color: rgb(160, 160, 160);}
+
+      .project {
+        
+        color: #ffffff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+        height: 87vh;
+      }
+      .key{
+        margin: 20px;
+      }
+      .table {
+        color: aliceblue;
+        display: flex;
+        flex-direction: row;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li class="logo"><h1>NIRANJAN</h1></li>
+            <li><a href="proj1.html">Project 1</a></li>
+            <li><a href="proj2.html">Project 2 </a></li>
+            <li><a href="proj3.html">Project 3 </a></li>
+            <li><a href="proj4.html">Project 4 </a></li>
+            <li><a href="dayandnight.html">Project 5 </a></li>
+            <li><a href="proj6.html">Project 6 </a></li>
+            <li><a href="proj7.html">Project 7 </a></li>
+            <li><a href="proj8.html">Project 8 </a></li>
+            <li><a href="proj9.html">Project 9 </a></li>
+            <li><a href="proj10.html">Project 10 </a></li>
+        </ul>
+    </header>
+
+        <div class="project">
+         <div class="key">Press the key and watch magic <hr>
+                    You can see keys with code
+                <hr> A-Z keys => code  65-90 ||  0-9keys => 48-57 
+                </div>
+      <div id="insert">
+       
+      </div>
+    </div>
+
+    <script>
+
+const insert = document.querySelector('#insert')
+
+window.addEventListener('keydown', (e) => {
+  
+    insert.innerHTML = `<div class="table">
+
+    <table>
+        <tr>
+            <th>keys</th>
+            <th>keys code</th>
+            <th>code</th>
+        </tr>
+        <tr>
+            <td>${e.key == " " ? "Space" : e.key}</td>
+            <td>${e.keyCode}</td>
+            <td>${e.code}</td>
+        </tr>
+    </table>
+
+    </div>`;
+});
+
+
+
+</script>
+</body>
+</html>
+
+    
+
+
