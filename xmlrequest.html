@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Http Requests</title>
+</head>
+
+<body>
+    
+    <script>
+
+document.body.style.backgroundColor = 'thistle'
+const newDiv = document.createElement('div')
+newDiv.style.height = "200px";
+newDiv.style.width = "200px";
+newDiv.textContent = "Hello, World!";
+newDiv.style.color = "black";
+newDiv.style.padding = "10px";
+document.body.appendChild(newDiv)
+
+   const div =document.createElement('div')
+   document.body.appendChild(div)
+
+   const li1 = document.createElement('li')
+   const li2 = document.createElement('li')
+   const li3 = document.createElement('li')
+   const li4 = document.createElement('li')
+    div.appendChild(li1)
+    div.appendChild(li2)
+    div.appendChild(li3)
+    div.appendChild(li4)
+
+
+const xmlrequest = new XMLHttpRequest()//created new xmlrequest
+xmlrequest.open('Get', 'https://api.github.com/users/itsniranjannn')    //opened a request with get and url to get
+xmlrequest.onreadystatechange = function(){  //onready state function
+ if(xmlrequest.readyState === 4){ //checked ready state is 4 or not if yes then 
+    const data = JSON.parse(this.responseText)  //get the response text then parsing into Json and assigning a variable
+   let profile = data.avatar_url //accessing the req data of api
+   let fol = data.followers
+   let name = data.name
+   let id = data.id
+   let location = data.location
+   let created = data.created_at
+   newDiv.style.backgroundImage = "url(https://avatars.githubusercontent.com//u/199079264?v=4)"
+   newDiv.style.backgroundSize = 'cover'
+   newDiv.innerHTML = name
+   li1.innerHTML = `Id : ${id}`
+   li2.innerHTML = `Follower : ${fol}`
+   li3.innerHTML = `Location : ${location}`
+   li4.innerHTML = `Creation date : ${created}`
+ }
+}
+xmlrequest.send()
+
+//=====1st try to xml req==========
+// const xmlreq = new XMLHttpRequest()
+// const url = 'https://api.github.com/users/itsniranjannn'
+// xmlreq.open('Get', url )
+
+// xmlreq.onreadystatechange = function(){
+//     if(xmlreq.readyState === 4){
+//     const mydata =  JSON.parse(this.responseText)
+//      console.log(mydata.name)
+//     }
+// }
+
+
+// xmlreq.send()
+
+    </script>
+</body>
+</html>
