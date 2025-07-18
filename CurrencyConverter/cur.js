@@ -1,28 +1,18 @@
-// Base URL of the currency exchange API you're using
+// Base URL of the currency exchange API ---- got this from Github 
 const BASE_URL = "https://2024-03-06.currency-api.pages.dev/v1/currencies";
 
-// Get all <select> elements inside elements with class "dropdown"
 const dropdowns = document.querySelectorAll(".dropdown select");
-
-// Get the button inside the form (used for triggering conversion)
 const btn = document.querySelector("form button");
-
-// Get the "from" currency dropdown
 const fromCurr = document.querySelector(".from select");
-
-// Get the "to" currency dropdown
 const toCurr = document.querySelector(".to select");
-
-// Get the paragraph inside the element with class "message" to show conversion result
 const msg = document.querySelector(".message p");
 
-// Loop through each dropdown (both "from" and "to")
-for (let select of dropdowns) {
-  // Loop through each currency code in the countryList object (e.g., USD, NPR, INR, etc.)
-  for (let currCode in countryList) {
+for (let select of dropdowns) {  // drop down ma loop lagako
+ 
+  for (let currCode in countryList) {   //extracted currency code from codes.js file 
     let option = document.createElement("option"); // Create an <option> element
-    option.innerText = currCode; // Display currency code (e.g., "USD")
-    option.value = currCode;     // Set value attribute (e.g., "USD")
+    option.innerText = currCode; // Display currency code 
+    option.value = currCode;     // Set value attribute 
 
     // Set default selected value: "USD" for 'from' and "NPR" for 'to'
     if (select.name === "from" && currCode === "USD") option.selected = true;
@@ -31,26 +21,25 @@ for (let select of dropdowns) {
     select.appendChild(option); // Add option to the dropdown
   }
 
-  // When user changes selection, update the flag next to the dropdown
-  select.addEventListener("change", (e) => {
+ 
+  select.addEventListener("change", (e) => { // When user changes select option then flag is change next to the dropdown
     updateFlag(e.target);
   });
 }
 
-// Function to update the flag image next to the selected currency
-const updateFlag = (element) => {
-  const currCode = element.value; // Get selected currency code (e.g., "USD")
-  const countryCode = countryList[currCode]; // Get related country code (e.g., "US")
 
-  const img = element.parentElement.querySelector("img"); // Get <img> tag inside the same container
-  // Set flag image source using flagsapi.com
-  img.src = `https://flagsapi.com/${countryCode}/flat/64.png`;
+const updateFlag = (element) => {// Function to update the flag image next to the selected currency
+  const currCode = element.value; // Get selected currency code
+  const countryCode = countryList[currCode]; // Get related country code 
+
+  const img = element.parentElement.querySelector("img"); 
+  
+  img.src = `https://flagsapi.com/${countryCode}/flat/64.png`;   
 };
 
-// Function to fetch the exchange rate and update the message
-const updateExchangeRate = async () => {
-  const amountInput = document.querySelector("#amount"); // Get input field where user types amount
-  let amt = parseFloat(amountInput.value); // Convert input to number
+const updateExchangeRate = async () => { // Function to fetch the exchange rate and update the message
+  const amountInput = document.querySelector("#amount"); // input field with amount
+  let amt = parseFloat(amountInput.value); // Convert input to number using parse
 
   // If amount is invalid or less than or equal to 0, default to 1
   if (isNaN(amt) || amt <= 0) {
@@ -62,10 +51,9 @@ const updateExchangeRate = async () => {
   const from = fromCurr.value.toLowerCase();
   const to = toCurr.value.toLowerCase();
 
-  // Construct the API endpoint (e.g., https://.../usd.json)
-  const url = `${BASE_URL}/${from}.json`;
-  console.log("Fetching:", url); // Log the URL (for debugging)
-
+ 
+  const url = `${BASE_URL}/${from}.json`;  // link banako mathi ko api url bata
+  console.log("Fetching:", url); // chcecking te status 200 ayo ki nai
   try {
     const res = await fetch(url); // Fetch data from the API
     const data = await res.json(); // Parse JSON response
