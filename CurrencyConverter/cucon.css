@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    height: 600px;
+    background-color: #484041;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 60vh;
+    width: 50vh;
+    background-color: #434371;
+    color: #ffffff;
+    padding: 1.5rem;
+    margin: 20px;
+    border-radius: 1rem;
+    
+}
+
+h2{ text-align: center;
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-bottom: 10px;
+}
+
+form{
+    margin: 15px;
+}
+ 
+form select, input, button{
+    width: 100%;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+}
+
+.amount{
+    padding-bottom: 10px;
+}
+
+.dropdown{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px 0px 0px;
+    text-align: center;
+}
+
+.logo{
+    width: 5px;
+}
+
+
+.select-con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px ;
+    background-color: #ECE5F0;
+    border-radius: 10px;
+    }
+
+select{
+    height: 30px;
+}
+
+i{
+    margin: 50px 0px 0px 0px;
+}
+
+
+form input{
+    height: 25px;
+    font-size: 15px;
+    padding: 3px;
+    margin-top: 10px ;
+}
+
+.message{
+    margin:30px 0px 30px 10px;
+    color: #ECE5F0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button{
+
+    background-color: #7C9082;
+    color: #ffffff;
+    height: 30px;
+}
