@@ -71,7 +71,7 @@
 //         this.password = password
 //     }
 //     newUserName(){   // created a function to chnage username
-//         return`Mr ${this.username}`
+//         return`Mr ${this.username.toUpperCase()}`
 //     }
 // }
 
@@ -83,3 +83,32 @@
 
 // newUser.encrypt()  //you pass word is encrypted : a29816763b4
 // console.log(newUser.newUserName()) //Mr niranjan
+
+
+//=======Inheritance===============//
+// class food{
+//     constructor(taste, price){
+//         this.taste = taste
+//         this.price = price
+//     }
+//     foodyfoo(){
+//         console.log(`its a food with taste${this.taste}, at such price ${this.price}`)
+//     }
+// }
+
+// class favFood extends food{
+//     constructor(taste, price, place){
+//         super(taste, price)
+//         this.place = place
+
+//     }
+//     favou(){
+//         console.log(`finds in ${this.place}`);
+        
+//     }
+// }
+
+// const momo = new favFood('good', 180, 'nepal')
+
+// momo.foodyfoo()
+// momo.favou()
