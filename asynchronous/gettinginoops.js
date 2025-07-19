@@ -112,3 +112,28 @@
 
 // momo.foodyfoo()
 // momo.favou()
+
+
+
+// Static KeyWord
+// class user{
+//     constructor(name, task){
+//         this.name = name
+//         this.task = task
+//     }
+//     createtask(){  // here this  function is accessible for all the new objected created
+//         console.log(`i am task maneger`);
+//     }
+//     static newtask(){   //this is not acessiblee for all cause it use Static 
+//         console.log(`its a task`);
+        
+//     }
+// }
+
+// const user1 = new user('nir', 'management')
+
+// console.log(user1);//user { name: 'nir', task: 'management' }
+
+// user1.createtask()//i am task maneger
+
+// user1.newtask()  // shows newtask is not function
