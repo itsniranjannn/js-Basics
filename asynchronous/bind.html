@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind in js</title>
+</head>
+<body>
+    <button>Click Here</button>
+
+    <script>
+//----------Bind-------------------//
+class react{
+    constructor(){
+        this.library = 'react'
+        this.server = "https://localhost:300"
+
+
+        document.querySelector('button').addEventListener('click', this.handleReq.
+         bind(this))   //when we place this bind then this will literally bind the below function and gives the context  
+    }
+
+    handleReq (){
+         console.log('button clicked')
+         console.log(this)//this returns the context of the react server, 
+         console.log(this.server)
+
+    }
+}
+const newRe = new react()
+    </script>
+</body>
+</html>
