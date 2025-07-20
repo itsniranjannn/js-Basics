@@ -44,6 +44,7 @@ myButton.click();   // output   ok clicked
 
 let looseClick = myButton.click;
 looseClick(); //output = undefined clicked    //not bound, 'this' is not myButton - it is the globalThis    
+myButton.click.call(myButton);  //ths is call method  //output OK clicked
 
 let boundClick = myButton.click.bind(myButton);  // here bind helps to bindthe above my button here
 boundClick(); // bound, 'this' is myButton
