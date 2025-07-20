@@ -22,12 +22,49 @@ class react{
 
     handleReq (){
          console.log('button clicked')
-         console.log(this)//this returns the context of the react server, 
-         console.log(this.server)
+         console.log(this)//this returns the context of the react class, 
+         console.log(this.server)  //gives server from class 
 
     }
 }
 const newRe = new react()
+
+
+
+
+// example 2 of bind
+let myButton = {  //declared a var
+  press: 'OK',
+  click() {
+    console.log(this.press + ' clicked');
+  }
+};
+
+myButton.click();   // output   ok clicked
+
+let looseClick = myButton.click;
+looseClick(); //output = undefined clicked    //not bound, 'this' is not myButton - it is the globalThis    
+
+let boundClick = myButton.click.bind(myButton);  // here bind helps to bindthe above my button here
+boundClick(); // bound, 'this' is myButton
+   
+
     </script>
 </body>
 </html>
+<!-- class react {
+ constructor(){
+    this.library ='react'
+    this.server= 'https://localhost:300'
+
+    document.querySelector('button').addEventListener('click', function(){
+    console.log("button clicked")
+    console.log(this.library);
+    
+     console.log(this.server)
+     
+ }.bind(this))
+
+}
+}
+ const Reactlib = new react() -->
