@@ -32,23 +32,40 @@
 
 // get and set on old method   ====   function based using define property
 
-// function Teacher (name, password){
+// function Teacher (name, password){  //declared a function
 //     this._name = name;
 //     this._password = password;
 
 
-// Object.defineProperty(this, 'name', {
-//     get: function(){
+// Object.defineProperty(this, 'name', {    //created a define property function with this keyword and passed name
+//     get: function(){              // get the value
 //         return this._name.toUpperCase();
 //     },
-//     set: function(val){
+//     set: function(val){           //set the value
 //         this._name = val;
 //     }
 // });
 // }
 // const newTeacher = new Teacher('nir', 12221)
-// console.log(newTeacher.name);
+// console.log(newTeacher.name);                 // NIR
 
 
 
+//################ Object Based GET AND SET ################//
+//in object get and set is litle different from other
+const mobile = {  //created an object here
+  
+        _model : 'samsung',  //using _ makes it private property
+        _price : 10000,
+        
 
+    get price(){   //bring from memory no problem of _ or not _underscore
+        return this._price*2   //multiplies the value of price by 2
+    },
+    set price(val){  //set to memory no problem of _ or not _underscore
+        this._price = val
+    }
+      
+}
+const newMobile = Object.create(mobile)  //object .create() helped to create a new object from above
+console.log(newMobile.price);
