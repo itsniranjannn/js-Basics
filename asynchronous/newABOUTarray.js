@@ -58,3 +58,6 @@ arr2.push('1')
 arr2.push('2')
 arr1[2] = '2'
 console.log(arr2);
+
+
+// if we pushed Nan and Infinity then array becames the Doubled and it cant be reversed , doesnt makes the sense of using Nan and Infinity
