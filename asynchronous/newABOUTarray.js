@@ -18,7 +18,25 @@ array.push('7')
 // Once a array is change it cant be reversed like if SMI is change to Double Integer It cant be reversed to SMI
 
 
+/// HOLEY Array
 
+array[10] = 10    // now this  created a hole inside array, between 7 & 10 there willbe empty space
+console.log(array) //[ 1, 2, 3, 4, 5, 6, '7', <3 empty items>, 10 ]
+console.log(array[8])  // get undefined cause there is empty in 8 and 9
+console.log(array.length);// 11
+console.log(array.hasOwnProperty(array, 9)); // returns false
+console.log(array.hasOwnProperty(Object.prototype, 9)); //false
+console.log(array.hasOwnProperty(array.prototype, 9)); // returns false
+
+
+//Most expensive check in js
+//Holes are expensive == there must not be holes in js
+// bound check
+// hasOwnProperty(array, 9)
+// hasOwnProperty(array.prototype, 9)
+// hasOwnProperty(Object.prototype, 9)
+
+// console.log(array[15]); //same as above there is empty space  Out of bound
 
 
 
