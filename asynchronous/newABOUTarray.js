@@ -39,4 +39,22 @@ console.log(array.hasOwnProperty(array.prototype, 9)); // returns false
 // console.log(array[15]); //same as above there is empty space  Out of bound
 
 
+//grade in array
+// once dowgraded cant upgrade
+// SMI > DOuble > Packed
+// holeySmi > HoleyDouble> HoleyPacked
 
+const arr1 = new Array(3) // this  create holey array
+arr1[0] = '0'
+arr1[1] = '1'
+arr1[2] = '2'
+console.log(arr1);
+
+
+// creating like this makes packed
+const arr2 = []  // we declared empty array now we can push inside this as much as we want
+arr2.push('0')
+arr2.push('1')
+arr2.push('2')
+arr1[2] = '2'
+console.log(arr2);
