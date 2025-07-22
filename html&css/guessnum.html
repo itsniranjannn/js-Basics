@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="guess" id="guess">
+    <button>submit</button>
+    <script>
+
+        randnum = Math.floor(Math.random()*100)
+        console.log(randnum);
+     let button = document.querySelector('button')
+     let userguess = document.querySelector('input')
+button.addEventListener('click', guess)
+
+  function guess(){
+
+    let input = parseInt(userguess.value)
+        if(input == randnum){
+            console.log('you guessed it right')
+        }
+        else if (input > randnum){
+            console.log('you guessed bigger number guess again')
+        }
+        else if (input < randnum){
+            console.log('you guessed smaller number, guess again')
+        }
+    }
+    </script>
+</body>
+</html>
